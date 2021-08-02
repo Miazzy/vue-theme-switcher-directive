@@ -1,4 +1,12 @@
 import { createApp } from "vue";
 import App from "./App";
+import VueThemeSwitcherDirective from "../src";
 
-createApp(App).mount("#app");
+const app = createApp(App);
+
+app.use(VueThemeSwitcherDirective, {
+  themes: ["light", "dark"],
+  theme: "light",
+});
+
+app.mount("#app");

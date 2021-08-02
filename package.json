@@ -10,9 +10,9 @@
     "dist"
   ],
   "scripts": {
+    "dev": "vue-cli-service serve demo",
     "build": "bili",
-    "demo": "vue-cli-service serve demo",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:demo": "vue-cli-service build demo --dest dist/demo"
   },
   "repository": {
     "type": "git",
