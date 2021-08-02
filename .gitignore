@@ -1,0 +1,8 @@
+# Dependency directory
+node_modules/
+
+# Build files
+dist
+
+# Contains a set of configuration files (.xml) for project in the JetBrains IDE
+.idea/

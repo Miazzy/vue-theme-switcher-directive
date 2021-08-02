@@ -1,0 +1,48 @@
+{
+  "name": "vue-theme-switcher-directive",
+  "version": "1.0.0",
+  "description": "Vue 3 directive to switch css theme",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "unpkg": "dist/index.umd.js",
+  "jsdelivr": "dist/index.umd.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bili",
+    "demo": "vue-cli-service serve demo",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chamexxxx/vue-theme-switcher-directive.git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "theme",
+    "switcher",
+    "directive",
+    "plugin"
+  ],
+  "author": {
+    "name": "Vyacheslav Vatlin",
+    "email": "vyacheslav.vatlin@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chamexxxx/vue-theme-switcher-directive/issues"
+  },
+  "homepage": "https://github.com/chamexxxx/vue-theme-switcher-directive#readme",
+  "devDependencies": {
+    "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.1.5",
+    "bili": "^5.0.5",
+    "pascalcase": "^1.0.0",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "vue": "^3.0.0"
+  }
+}
