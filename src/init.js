@@ -4,7 +4,7 @@ import isFunction from "lodash/isFunction";
 import isPlainObject from "lodash/isPlainObject";
 
 export default (app, options) => {
-  let { themes, theme, getClass } = options || {};
+  let { themes, theme, getClass, afterChanged } = options || {};
 
   if (!themes) {
     throw new Error("There are no themes in the options");
@@ -32,6 +32,10 @@ export default (app, options) => {
     throw new Error("getClass parameter must be a function");
   }
 
+  if (afterChanged && !isFunction(afterChanged)) {
+    throw new Error("afterChanged parameter must be a function");
+  }
+
   const currentTheme = ref(theme || themes[0]);
 
   const changeTheme = (theme) => {
@@ -39,7 +43,11 @@ export default (app, options) => {
       throw new Error(`The ${theme} theme does not exist`);
     }
 
+    const prevTheme = currentTheme.value;
+
     currentTheme.value = theme;
+
+    afterChanged(theme, prevTheme);
   };
 
   app.config.globalProperties.theme = computed(() => currentTheme.value);
