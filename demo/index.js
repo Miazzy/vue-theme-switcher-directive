@@ -6,7 +6,10 @@ const app = createApp(App);
 
 app.use(VueThemeSwitcherDirective, {
   themes: ["light", "dark"],
-  theme: "light",
+  theme: localStorage.getItem("theme") || "light",
+  afterChanged: (theme) => {
+    localStorage.setItem("theme", theme);
+  },
 });
 
 app.mount("#app");
