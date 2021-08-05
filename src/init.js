@@ -47,7 +47,7 @@ export default (app, options) => {
 
     currentTheme.value = theme;
 
-    afterChanged(theme, prevTheme);
+    afterChanged && afterChanged(theme, prevTheme);
   };
 
   app.config.globalProperties.theme = computed(() => currentTheme.value);
